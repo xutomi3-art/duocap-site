@@ -1,14 +1,14 @@
-/** The real Duocap app icon (blue rounded square with caption bars) — synced from
- *  design/Duocap.iconset in the app repo. Replaces the old abstract SVG mark so the
- *  site and the shipped app share one identity (user 2026-07-22). */
+/** Duocap logo mark for dark surfaces: the caption-bar glyph from the app icon,
+ *  rendered pure white on a transparent background (user 2026-07-22 — the full-color
+ *  rounded-square icon clashed with the site's palette; favicon keeps the color icon). */
 export default function LogoMark({ className = 'w-8 h-8' }: { className?: string }) {
   return (
-    <img
-      src="/app-icon.png"
-      srcSet="/app-icon.png 1x, /app-icon-512.png 2x"
-      alt="Duocap"
-      className={className}
-      draggable={false}
-    />
+    <svg viewBox="0 0 256 256" fill="#fff" className={className} aria-label="Duocap">
+      {/* top caption bar */}
+      <rect x="52" y="92" width="152" height="30" rx="15" />
+      {/* bottom caption bar + speaker dot */}
+      <rect x="52" y="138" width="96" height="30" rx="15" />
+      <circle cx="182" cy="153" r="15" />
+    </svg>
   )
 }
