@@ -24,8 +24,9 @@ export default function App() {
           className="w-full h-full object-cover pointer-events-none scale-[1.04]"
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4"
         />
-        {/* Cinematic grade over the footage: cooler shadows, gentle top-to-bottom fall-off */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0c0c0c]/40 via-transparent to-[#0c0c0c]/80" />
+        {/* Cinematic grade over the footage: cooler shadows, gentle top-to-bottom fall-off.
+            Top lightened /40 → /15 — with the letterbox on top it drowned the navbar. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c0c0c]/15 via-transparent to-[#0c0c0c]/80" />
       </div>
 
       {/* Vertical guide lines at the 36rem container edges */}
