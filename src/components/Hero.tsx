@@ -104,7 +104,10 @@ export default function Hero() {
         className="mt-8 flex flex-col items-center gap-3"
       >
         <AppleButton />
-        <span className="text-xs text-white/40">For macOS 15+ · Apple Silicon</span>
+        <span className="text-xs text-white/40">
+          For macOS 15+ · Apple Silicon · v0.4.42 · Not yet notarized — after the first launch is
+          blocked, allow it in System Settings → Privacy &amp; Security.
+        </span>
       </motion.div>
     </section>
   )
