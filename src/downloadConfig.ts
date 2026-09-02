@@ -5,6 +5,6 @@
  *    (Internal-keyed build; user decision 2026-08-17: direct download from the button.)
  *  - Mac App Store link once the review passes: "https://apps.apple.com/app/id<ID>"
  */
-export const DOWNLOAD_URL = '/downloads/Duocap-0.4.44-macOS.dmg'
+export const DOWNLOAD_URL = '/downloads/Duocap-0.4.45-macOS.dmg'
 export const DOWNLOAD_IS_EXTERNAL = false
-export const DOWNLOAD_FILENAME = 'Duocap-0.4.44-macOS.dmg'
+export const DOWNLOAD_FILENAME = 'Duocap-0.4.45-macOS.dmg'

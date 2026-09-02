@@ -105,7 +105,7 @@ export default function Hero() {
       >
         <AppleButton />
         <span className="text-xs text-white/40">
-          For macOS 15+ · Apple Silicon · v0.4.44 · Not yet notarized — after the first launch is
+          For macOS 15+ · Apple Silicon · v0.4.45 · Not yet notarized — after the first launch is
           blocked, allow it in System Settings → Privacy &amp; Security.
         </span>
       </motion.div>
