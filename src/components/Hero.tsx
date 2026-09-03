@@ -1,6 +1,8 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import AppleButton from './AppleButton'
+import WindowsButton from './WindowsButton'
+import { MAC_VERSION, WIN_NOTE } from '../downloadConfig'
 
 const gradientStyle: CSSProperties = {
   backgroundImage:
@@ -103,11 +105,22 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.7, ease }}
         className="mt-8 flex flex-col items-center gap-3"
       >
-        <AppleButton />
-        <span className="text-xs text-white/40">
-          For macOS 15+ · Apple Silicon · v0.4.45 · Not yet notarized — after the first launch is
-          blocked, allow it in System Settings → Privacy &amp; Security.
-        </span>
+        {/* Two platforms side by side (user 2026-09-03). Windows stays visually SECONDARY —
+            outlined pill + BETA chip — because it is a labelled test build that has never run
+            on real Windows hardware; the page must not imply the Mac app's readiness. */}
+        <div className="flex flex-col sm:flex-row items-center gap-3">
+          <AppleButton />
+          <WindowsButton />
+        </div>
+
+        {/* Each platform keeps its own caveat, in the same order as the buttons above. */}
+        <div className="mt-1 flex flex-col items-center gap-1.5">
+          <span className="max-w-xl text-center text-xs text-white/40">
+            For macOS 15+ · Apple Silicon · v{MAC_VERSION} · Not yet notarized — after the first
+            launch is blocked, allow it in System Settings → Privacy &amp; Security.
+          </span>
+          <span className="max-w-xl text-center text-xs text-white/30">{WIN_NOTE}</span>
+        </div>
       </motion.div>
     </section>
   )

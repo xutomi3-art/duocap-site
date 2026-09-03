@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { ChevronRight } from 'lucide-react'
 import AppleButton from './AppleButton'
+import WindowsButton from './WindowsButton'
 
 export default function FinalCTA() {
   return (
@@ -30,6 +31,7 @@ export default function FinalCTA() {
         </p>
         <div className="relative mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <AppleButton label="Download Duocap" />
+          <WindowsButton label="Windows" />
           <button className="group inline-flex items-center gap-1.5 rounded-full border border-white/15 text-white text-sm font-medium px-5 py-3 hover:bg-white/5 transition-colors">
             Talk to sales
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-[1px]" />
